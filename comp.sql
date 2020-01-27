@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-01-2020 a las 23:51:55
+-- Tiempo de generación: 27-01-2020 a las 16:22:00
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.9
 
@@ -25,18 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `archivos`
---
-
-CREATE TABLE `archivos` (
-  `id` int(11) NOT NULL,
-  `nombrearch` varchar(255) NOT NULL,
-  `fecha` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `listas`
 --
 
@@ -49,14 +37,15 @@ CREATE TABLE `listas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Índices para tablas volcadas
+-- Volcado de datos para la tabla `listas`
 --
 
+INSERT INTO `listas` (`id`, `idarch`, `codigo`, `nombre`, `campos`) VALUES
+(1, 10, 'BO018101430', 'Marlon Luan Quispe Choquetarqui', 'Preschool#8 Years 3 Months#BO0181');
+
 --
--- Indices de la tabla `archivos`
+-- Índices para tablas volcadas
 --
-ALTER TABLE `archivos`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `listas`
@@ -69,16 +58,10 @@ ALTER TABLE `listas`
 --
 
 --
--- AUTO_INCREMENT de la tabla `archivos`
---
-ALTER TABLE `archivos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `listas`
 --
 ALTER TABLE `listas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
